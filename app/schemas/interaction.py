@@ -1,15 +1,15 @@
 
-from pydantic import BaseModel, Field
+
+from pydantic import BaseModel, Field, ConfigDict
 from typing import Optional, List
 
-# AI Chat Request
 
+# AI Chat Request
 class InteractionRequest(BaseModel):
     message: str
 
 
 # Save Interaction Request
-
 class InteractionCreate(BaseModel):
     hcp_name: Optional[str] = None
     interaction_type: Optional[str] = None
@@ -23,6 +23,7 @@ class InteractionCreate(BaseModel):
     samples: List[str] = Field(default_factory=list)
 
     sentiment: Optional[str] = None
+
     outcomes: Optional[str] = None
     follow_up: Optional[str] = None
 
@@ -31,8 +32,9 @@ class InteractionCreate(BaseModel):
 
 
 # AI Response
-
 class InteractionResponse(BaseModel):
+    id: Optional[str] = None
+
     hcp_name: Optional[str] = None
     interaction_type: Optional[str] = None
 
@@ -45,8 +47,14 @@ class InteractionResponse(BaseModel):
     samples: List[str] = Field(default_factory=list)
 
     sentiment: Optional[str] = None
+
     outcomes: Optional[str] = None
     follow_up: Optional[str] = None
 
     summary: Optional[str] = None
     next_action: Optional[str] = None
+
+    model_config = ConfigDict(
+        populate_by_name=True,
+        arbitrary_types_allowed=True
+    )
