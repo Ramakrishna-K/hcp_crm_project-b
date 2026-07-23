@@ -14,13 +14,13 @@ from app.database.db import (
 async def lifespan(app: FastAPI):
     # Startup
     await connect_to_mongo()
-    print("🚀 Application Started")
+    print(" Application Started")
 
     yield
 
     # Shutdown
     await close_mongo_connection()
-    print("🛑 Application Stopped")
+    print(" Application Stopped")
 
 
 app = FastAPI(
