@@ -25,7 +25,7 @@ async def connect_to_mongo():
         # print("Collection:", interaction_collection.name)
 
     except Exception as e:
-        print("❌ MongoDB Connection Error:", e)
+        print(" MongoDB Connection Error:", e)
         raise
 
 
