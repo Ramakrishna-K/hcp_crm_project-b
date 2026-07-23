@@ -34,4 +34,4 @@ async def close_mongo_connection():
 
     if client:
         client.close()
-        print("🔴 MongoDB Connection Closed")
+        print(" MongoDB Connection Closed")
