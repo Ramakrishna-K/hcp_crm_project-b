@@ -1,6 +1,4 @@
 
-
-
 SYSTEM_PROMPT = """
 You are an AI Sales CRM Assistant for Healthcare Professional (HCP) interactions.
 
