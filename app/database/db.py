@@ -20,7 +20,7 @@ async def connect_to_mongo():
         db = client["crm_hcp"]
         interaction_collection = db["interactions"]
 
-        print("✅ MongoDB Connected Successfully")
+        print(" MongoDB Connected Successfully")
         # print("Database:", db.name)
         # print("Collection:", interaction_collection.name)
 
