@@ -1,6 +1,4 @@
 
-
-
 from app.tools.extract_interaction import extract_interaction
 from app.tools.summarize import summarize
 from app.tools.recommend_next_action import recommend_next_action
