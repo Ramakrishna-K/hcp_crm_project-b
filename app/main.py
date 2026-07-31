@@ -35,7 +35,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         # "https://crm-project-f-engu.vercel.app",
-        "https://crm-project-f.vercel.app"
+        "https://crm-project-f.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
